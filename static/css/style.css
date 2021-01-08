@@ -1,0 +1,80 @@
+
+        *{
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            box-sizing: border-box;
+
+        }
+  
+        body{
+            background: #cfdac8;
+            
+           
+        }
+        .titulo {
+            background: #7c9473;
+            display: flex;
+            justify-content: center;
+            margin: 0.em 5em;
+            max-width: 100%;
+        }
+        .forma{
+            display: flex;
+            justify-content: center;
+            margin: 0.5em 5em;
+            max-width: 100%;
+            
+            
+          
+        
+        }
+        button{
+            font-weight: normal;
+            background:#7c9473;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+       ul{
+           padding: 8px 8px;
+           margin: 4px 2px;
+        }
+        ul > .btn {
+          background:none;
+          border: solid 2px white;
+          text-decoration:none;
+          color:black;
+          padding: 5px;
+          box-sizing: border-box;
+          margin-left: 2px;
+         
+        }
+        ul > .btn:hover{
+            text-transform:uppercase;
+            border-color:#7c9473;
+            background:none;
+            color:black;
+        }
+        ul > .btn:active{
+            border-color:#7c9473;
+            background:none;
+            color:black;
+        }
+        .head{
+            max-width: 100%;
+           
+        }
+        
+        .module-container{
+            max-width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .proxy-lives{
+            margin-left: 5px;
+        }

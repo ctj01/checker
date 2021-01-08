@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proxy checker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    
+</head>
+<body>
+    <header class="head">
+        <div class="titulo">
+            <h1>Proxy Checker</h1>
+        </div>
+        <nav class="nav-container">
+            <ul class="lista">
+                <a type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Proxy List</a>
+                <a type="button" class="btn btn-info btn-lg" href="http://proxydb.net/extractor" target="_blank">Proxy Extractor</a>
+            </ul>
+        </nav>
+    </header>
+    <div class="forma">
+        <form method="post" action="">
+            <div class ="proxy-area">
+                <textarea  name="proxy-container" rows="20" cols="40" placeholder="Insert your proxies here example: 192.0.1:80" style="resize: none;"></textarea>
+                <textarea  id="proxy-lives" rows="20" cols="40" placeholder="Working proxies will appear here" style="resize: none;">{{prox}}</textarea>
+            </div>
+            <button type ="submit" name="check">Check</button>
+        </form>
+    <div>
+        <button style="border: solid 2px white; background: none; margin: 20px; font-weight: bold; padding: 4px 4px" class="copy" onclick="copy()">Copy</button>
+    </div>
+        
+    </div>
+    
+    <div class="container-modal">
+        <form method="GET" action="" id="forma-get">
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Proxy list</h4>
+                    </div>
+                    <div class="modal-body">
+                      <textarea id="proxies" id="" cols="50" rows="20">{{listproxylist}}</textarea>
+                    </div>
+                    <button style="margin-left: 15px" type="submit" class="btn btn-info btn-lg">Get Proxies</button>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </form>
+        
+    </div>
+</body>
+<script>
+    f = document.getElementById("forma-get")
+    function handleForm(event) {
+
+        event.preventDefault("forma-get");
+        texto = document.getElementById("proxies")
+        fetch("http://list.didsoft.com/get?email=cristianmt023@gmail.com&pass=a5zjmd&pid=http6500&showcountry=no").then(x => texto.innerHTML = x)
+    }
+    f.addEventListener('submit', handleForm)
+    function copy() {
+    
+    let textarea = document.getElementById("proxy-lives");
+    textarea.select();
+    document.execCommand("copy");
+    }
+    
+</script>
+</html>
