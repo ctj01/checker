@@ -1,10 +1,7 @@
 from proxy_checker import  ProxyChecker
 from concurrent import futures
 from flask import Flask, request, render_template, send_file
-import  json
 import requests
-from flask_cors import CORS, cross_origin
-import asyncio
 
 
 app = Flask(__name__)
