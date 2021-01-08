@@ -1,1 +1,1 @@
-web: gunicorn app:proxychecker
+web: gunicorn proxychecker:app
