@@ -49,7 +49,6 @@ proxy-checker==0.6
 pycairo==1.16.2
 pycups==2.0.1
 pycurl==7.43.0.2
-PyGObject==3.38.0
 PyJWT==1.7.1
 pylint==2.6.0
 pymacaroons==0.13.0
