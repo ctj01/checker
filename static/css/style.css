@@ -150,7 +150,7 @@
                 }
                 button{
                     padding: 5px;
-                    font: size 15px;
+                    font-size: 15px;
                 }
         }
         @media screen and (max-width:369px) and (height: 640px) and (-webkit-device-pixel-ratio: 3){
