@@ -16,7 +16,7 @@ def check_proxy_(proxy):
 def index():
     return render_template('index.html')
 
-@app.route('/inicio/', methods=["POST"])
+@app.route('/', methods=["POST"])
 
 def getproxy_():
     proxy = request.form.get('proxy-container')
