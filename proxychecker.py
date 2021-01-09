@@ -12,7 +12,7 @@ def check_proxy_(proxy):
     if x != False:
         return proxy
 
-@app.route('/inicio/') 
+@app.route('/') 
 def index():
     return render_template('index.html')
 
