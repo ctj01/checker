@@ -3,27 +3,30 @@
             font-family: 'Roboto', sans-serif;
             overflow: hidden;
             box-sizing: border-box;
+            height: auto;
+            max-width:100%;
 
         }
   
         body{
-            background: #cfdac8;
+            background: white;
+            height: 100%;
             
            
         }
         .titulo {
-            background: #7c9473;
+            
             display: flex;
             justify-content: center;
             margin: 0.em 5em;
             max-width: 100%;
+            font-weight: bold;
         }
         .forma{
             display: flex;
             justify-content: center;
             margin: 0.5em 5em;
             max-width: 100%;
-            
             
           
         
@@ -41,29 +44,30 @@
             cursor: pointer;
         }
        ul{
-           padding: 8px 8px;
+           padding: 4px 4px;
            margin: 4px 2px;
         }
         ul > .btn {
           background:none;
-          border: solid 2px white;
+          border: none;
           text-decoration:none;
-          color:black;
-          padding: 5px;
+          color:white;
+          padding: 3px;
           box-sizing: border-box;
           margin-left: 2px;
+          font-size: 16px
          
         }
         ul > .btn:hover{
             text-transform:uppercase;
             border-color:#7c9473;
             background:none;
-            color:black;
+            color:#ffeebb;
         }
         ul > .btn:active{
             border-color:#7c9473;
             background:none;
-            color:black;
+            color:#ffeebb;
         }
         .head{
             max-width: 100%;
@@ -78,3 +82,77 @@
         .proxy-lives{
             margin-left: 5px;
         }
+        textarea{
+            margin-left: 5px;
+        }
+        button{
+            padding: 8px;
+            background-color: #222831;
+            color: white;
+            border: solid 1px white;
+        }
+        @media screen and (max-width: 992px) {
+            .forma {
+                display: flex;
+                flex-direction: column;
+            }
+            form{
+                padding: 0px;
+                margin-top: 3px;
+            }
+            textarea{
+                margin: auto;
+                width: 300px;
+                height: 205px;
+            }
+            .copy{
+                
+                padding: 0px;
+            }
+            button{
+                padding:5px;
+            }
+          }
+          @media screen 
+          and (max-width: 280px) 
+          and (height: 653px) 
+          and (-webkit-device-pixel-ratio: 3) {
+            body{
+                height:653px;
+                }
+                .forma {
+                    max-height: 653px;
+                }
+                button{
+                    padding: 5px;
+                    font: size 15px;
+                }
+        }
+        @media screen 
+          and (max-width:369px) 
+          and (height: 640px) 
+          and (-webkit-device-pixel-ratio: 3){
+                    body{
+                        height: 640px;
+                  }
+                  button{
+                    padding: 5px;
+                    font: size 15px;
+                }
+          }
+          @media screen 
+          and (max-width:320px) 
+          and (height: 568px){
+              body{
+                    max-height: 568px;
+              }
+              textarea{
+                margin: auto;
+                width: 300px;
+                height: 145px;
+            }
+            button{
+                padding: 5px;
+                font: size 15px;
+            }
+          }
