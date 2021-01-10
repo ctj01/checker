@@ -2,6 +2,7 @@ from proxy_checker import  ProxyChecker
 from concurrent import futures
 from flask import Flask, request, render_template, send_file
 import requests
+import json
 
 
 app = Flask(__name__)
@@ -36,6 +37,13 @@ def getproxy_():
         return render_template('index.html', prox = fin)
  
     return ""
+@app.route("/proxies")
+def  readproxies():
+    f = open("proxfinal.txt", "r")
+    proxys  = ""
+    for  x in f:
+        proxys += str(x)
+    return render_template("proxy.html", proxies = json.dumps(proxys))
 
 
 
