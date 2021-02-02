@@ -10,8 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
     
 </head>
 <body>
@@ -28,22 +27,23 @@
     </header>
     <main>
         <section class="forma">
-            <form class="form"method="post" action="">
+            <form class="form" method="post" action="">
                 <div class ="proxy-area">
-                    <textarea  name="proxy-container" rows="18" cols="40" placeholder="Insert your proxies here example: 192.0.1:80" style="resize: none;"></textarea>
+                    <textarea id ="textare" name="proxy-container" rows="18" cols="40" placeholder="Insert your proxies here example: 192.0.1:80" style="resize: none;"></textarea>
                 </div>
-                <button type ="submit" name="check">Check</button>
+                <button id = "submit"type ="submit" name="check" >Check</button>
             </form>
+            <div class="loader"></div>
             <form class="form">
-                <textarea  id="proxy-lives" rows="18" cols="40" placeholder="Working proxies will appear here" style="resize: none;">{{prox}}</textarea>
-                <button onclick="copy()">Copy</button>
+                <textarea  id="proxy-lives" rows="18" cols="40" placeholder="Working proxies will appear here" style="resize: none;"></textarea>
+                <button onclick="Copy()" id="copy">Copy</button>
             </form>
         <section>
     </main>
     <footer>
 
     </footer>
-    
+
     <div class="container-modal">
         <form class ="proxy-get-lives"method="GET" action="" id="forma-get">
             <div class="modal fade" id="myModal" role="dialog">
@@ -63,8 +63,7 @@
                 </div>
               </div>
         </form>
-        
     </div>
 </body>
-<script src="{{url_for('static', filename='js/boosts.js')}}"></script>
+<script src="/static/js/boosts.js"></script>
 </html>
