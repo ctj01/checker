@@ -83,6 +83,5 @@ websockets==8.1
 Werkzeug==1.0.1
 wrapt==1.12.1
 wsproto==0.15.0
-xkit==0.0.0
 zope.event==4.5.0
 zope.interface==5.2.0
