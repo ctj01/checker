@@ -1,4 +1,4 @@
-gcc==10.2.0
+gcc==10.2
 astroid==2.4.2
 bcrypt==3.1.7
 beautifulsoup4==4.9.3
