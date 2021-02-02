@@ -23,7 +23,7 @@ def check_proxy_(proxy):
     if x != False:
         return proxy
 
-@app.get("/")
+##@app.get("/")
 async def root():
     return {"message": "Hello World"}
 
